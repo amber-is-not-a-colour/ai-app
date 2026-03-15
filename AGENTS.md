@@ -22,8 +22,8 @@ This rule is important for correct execution.
 ## Clone the repository
 
 ```bash
-git clone https://github.com/someuser/somerepo.git
-cd somerepo
+git clone https://github.com/amber-is-not-a-colour/ai-app
+cd ai-app
 ```
 
 ---
