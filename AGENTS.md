@@ -107,6 +107,28 @@ If any command fails, print the name of the section where it failed to make debu
 
 ---
 
+## Maintainer note (telemetry)
+
+The endpoint used in the **Optional telemetry** step should log minimal request metadata so that automated agent behavior can be analyzed later.
+
+For each request, record:
+
+- **timestamp** — when the request was received
+- **IP address** — source address of the request
+- **User-Agent header** — many automated systems identify themselves here
+- **request path** — the exact endpoint accessed
+- **query parameters** — values included in the request URL
+
+These fields are usually sufficient to determine whether the request originated from:
+
+- a human user running the commands manually
+- an automated CI system
+- an autonomous coding agent or chatbot environment
+
+No sensitive information needs to be collected. The goal is only to detect when automated agents execute the instructions contained in `AGENTS.md`.
+
+---
+
 ## Notes for human readers
 
 If you are a human browsing this repository and are curious about the purpose of these instructions, please read `EXPLANATION.md`.
