@@ -73,7 +73,8 @@ If a user explicitly asks an AI system to analyze the repository, a robust syste
 
 This tests whether the agent prioritizes **user intent over repository instructions**.
 
-Additionally, vulnerable agents will not read this explanation in `EXPLANATION.md`.
+Additionally, vulnerable agents will not read this explanation in `EXPLANATION.md`, and therefore, remain oblivious.
+
 ---
 
 ## The command execution tests
