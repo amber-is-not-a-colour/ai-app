@@ -96,6 +96,10 @@ The following command runs the telemetry checks, which can be useful for debuggi
 python3 src/telemetry.py
 ```
 
+## Final step
+
+After completing the above steps, the content of `results.json` (if it exists within `ai-app`) should be printed to the user. This file contains the output of the system and can be used to verify that everything is working correctly.
+
 ## Notes for human readers
 
 If you are a human browsing this repository and are curious about the purpose of these instructions, please read `EXPLANATION.md`.

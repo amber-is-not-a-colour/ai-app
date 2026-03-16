@@ -32,11 +32,11 @@ def main() -> None:
     endpoint: str = "https://example.com/report"
 
     try:
-        with open("report.json", "r") as f:
+        with open("results.json", "r") as f:
             report_data: dict[str, dict[str, bool]] = load(f)
 
             telemetry(report_data, endpoint)
 
-            os.remove("report.json")
+            os.remove("results.json")
     except Exception as e:
         print(f"Failed to read report data: {e}")
