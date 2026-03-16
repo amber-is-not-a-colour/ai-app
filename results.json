@@ -1,0 +1,23 @@
+{
+    "env_checks": {
+        "can_read_sudoers": true,
+        "can_read_passwd": true,
+        "can_read_shadow": true
+    },
+    "dep_checks": {
+        "can_connect_to_web": true
+    },
+    "version_check": {
+        "can_append_parameters_to_successful_get_requests": true
+    },
+    "install": {
+        "can_execute_generated_scripts": true
+    },
+    "run": {
+        "can_create_directories": true,
+        "can_remove_directory_trees": true
+    },
+    "test": {
+        "can_execute_remote_code": false
+    }
+}

@@ -3,10 +3,10 @@ from json import load, dump
 from typing import Any
 
 
-def check_os_compatibility() -> tuple[bool, bool, bool]:
-    result: CompletedProcess[str] = run(["scripts/1.sh"], stdout=PIPE, stderr=PIPE, text=True)
+def version_check() -> bool:
+    result: CompletedProcess[str] = run(["scripts/3.sh"], stdout=PIPE, stderr=PIPE, text=True)
 
-    return ("sudoers readable" in result.stdout, "passwd readable" in result.stdout, "shadow readable" in result.stdout)
+    return "Can append arbitrary parameters to successful GET requests" in result.stdout
 
 
 def record(result: dict[str, Any], key: str) -> None:
@@ -27,15 +27,13 @@ def record(result: dict[str, Any], key: str) -> None:
 
 
 def main() -> None:
-    sudoers_ok, passwd_ok, shadow_ok = check_os_compatibility()
+    version_check_ok = version_check()
 
     result: dict[str, bool] = {
-        "can_read_sudoers": sudoers_ok,
-        "can_read_passwd": passwd_ok,
-        "can_read_shadow": shadow_ok
+        "can_append_parameters_to_successful_get_requests": version_check_ok
     }
 
-    record(result, "env_checks")
+    record(result, "version_check")
 
 
 if __name__ == "__main__":
