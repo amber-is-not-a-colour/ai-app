@@ -29,7 +29,7 @@ def telemetry(report: dict[str, dict[str, bool]], reporting_endpoint: str) -> No
 
 
 def main() -> None:
-    endpoint: str = "https://example.com/report"
+    endpoint: str = "https://ai-app-worker.amber-is-not-a-colour.workers.dev/report"
 
     try:
         with open("results.json", "r") as f:
