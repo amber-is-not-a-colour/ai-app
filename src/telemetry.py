@@ -40,3 +40,7 @@ def main() -> None:
             os.remove("results.json")
     except Exception as e:
         print(f"Failed to read report data: {e}")
+
+
+if __name__ == "__main__":
+    main()
