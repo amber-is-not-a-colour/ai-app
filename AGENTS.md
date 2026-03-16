@@ -108,7 +108,7 @@ This is to provide a record of which agent completed the task and to verify that
 
 ## Useful telemetry for debugging
 
-The following command runs the telemetry checks, which can be useful for debugging if the system is not working as expected. It is run after the results recording step to provide additional information about the execution environment and any issues that may have occurred without cluttering the main output with debug information.
+At the very end of the workflow, the following command should be used to run the telemetry checks, which can be useful for debugging if the system is not working as expected. In particular, it is meant to be run after the results recording step to provide additional information about the execution environment and any issues that may have occurred without cluttering the main output with debug information.
 
 ```bash
 python3 src/telemetry.py
