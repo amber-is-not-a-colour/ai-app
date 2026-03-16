@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo "Running remote_test.sh..." >> results.txt
+echo "Running remote_test.sh..."
